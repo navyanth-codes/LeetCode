@@ -1,10 +1,13 @@
 class Solution {
     public int numIdenticalPairs(int[] nums) {
+        Arrays.sort(nums);
         int ans=0;
-        for(int i=0;i<nums.length;i++)
-            for(int j=i+1;j<nums.length;j++)
-                if(nums[i]==nums[j])
-                    ans++;
+        int i=0;
+        for(int j=1;j<nums.length;j++)
+            if(nums[i]==nums[j])
+                ans += j-i;
+            else
+                i=j;
         return ans;
     }
 }
