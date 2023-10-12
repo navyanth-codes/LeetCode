@@ -1,8 +1,9 @@
 class Solution {
-    public int finalValueAfterOperations(String[] operations) {
+public:
+    int finalValueAfterOperations(vector<string>& operations) {
         int x=0;
-        for(int i=0;i<operations.length;i++){
-            if(operations[i].charAt(1)=='+'){
+        for(int i=0;i<operations.size();i++){
+            if(operations[i]=="X++" || operations[i]=="++X"){
                 x++;
             }
             else{
@@ -11,4 +12,4 @@ class Solution {
         }
         return x;
     }
-}
+};
