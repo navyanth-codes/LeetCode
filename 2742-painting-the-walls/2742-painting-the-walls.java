@@ -2,7 +2,6 @@ class Solution {
   public int paintWalls(int[] cost, int[] time) {
     final int kMax = 500_000_000;
     final int n = cost.length;
-    // dp[i] := min cost to paint i walls by painters so far
     int[] dp = new int[n + 1];
     Arrays.fill(dp, kMax);
     dp[0] = 0;
