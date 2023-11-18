@@ -1,3 +1,8 @@
 class Solution:
     def mostWordsFound(self, ss: List[str]) -> int:
-       return max(s.count(" ") for s in ss) + 1
+        n=len(ss)
+        ans=0
+        for i in range(n):
+            z=ss[i].split(" ")
+            ans=max(ans,len(z))
+        return ans
